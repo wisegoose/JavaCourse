@@ -1,0 +1,26 @@
+
+class Square implements FigureInterface {
+    int a;
+
+    Square() {
+        System.out.println("Введите длину одной стороны:");
+        this.a = InputData.scanner.nextInt();
+        System.out.println(toString());
+    }
+
+    @Override
+    public float perimeter() {
+        return a * 4;
+    }
+
+    @Override
+    public float area() {
+        return a * a;
+    }
+
+    @Override
+    public String toString(){
+        String name = "Square";
+        return name + " perimeter:" + perimeter() + " area:" + area();
+    }
+}
