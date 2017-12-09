@@ -9,6 +9,7 @@ public class Triangle implements FigureInterface {
             this.b = InputData.scanner.nextInt();
             this.c = InputData.scanner.nextInt();
             System.out.println(toString());
+            new DataBase (toString());
         }
 
         @Override
