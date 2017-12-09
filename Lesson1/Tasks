@@ -1,0 +1,114 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+/**
+ *
+ * first lesson
+ *
+ */
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Task 1
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+        System.out.println("Сумма 2-х аргументов из комендной строки = " + (num1+num2));
+
+        //Task 2
+
+        System.out.println("Введите 2 числа через пробел:");
+        Scanner sc = new Scanner(System.in);
+        int number1 = sc.nextInt();//присваивает значение переменной
+        int number2 = sc.nextInt();
+        System.out.println("Выберете действие: + , - , * , /");
+        char znak = sc.next().charAt(0);
+        try {
+            switch (znak) {
+                case '+':
+                    System.out.print(number1 + number2);
+                    break;
+                case '-':
+                    System.out.print(number1 - number2);
+                    break;
+                case '*':
+                    System.out.print(number1 * number2);
+                    break;
+                case '/':
+                    System.out.println(number1 / number2);
+                    break;
+                default:
+                    System.out.print("Неверный символ");
+                    break;
+            }
+        }catch (ArithmeticException e){
+            System.out.println("Ошибка " + e);
+        }
+    }
+
+    //Task 3
+
+    private static long factorial(long x) {
+        if (x<=1) {
+            return 1;}//частный случай
+        else{
+            return x*factorial(x-1);//рекурсия
+        }
+    }
+
+    //Task 4
+
+    private static void rev (String s){
+        //BufferedReader s = new BufferedReader(new InputStreamReader(System.in));
+        //String str = s.readLine();
+        String str1 = "I want to become a developer";
+        String str2 = new StringBuffer(str1).reverse().toString();
+        System.out.println(str2);
+    }
+
+    //Task 5
+/**
+    private static void ip(int x) {
+
+        Scanner sc = new Scanner(System.in);
+        int mask = 0;
+        try {
+            System.out.println("Введите префикс маски подсети от 0 до 32");
+            mask = sc.nextInt();
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
+        int[] maskList = new int[32];
+        for (int i = 0; i < maskList.length - 1; i++) {
+            maskList[i] = 0;
+        }
+        for (int i = 0; i < mask; i++){
+            maskList[i] = 1;
+        }
+
+
+            byte[] ip1 = new byte[4];
+        System.out.println("enter first IP:");
+        BufferedReader ia = new BufferedReader(new InputStreamReader(System.in));
+        String s;
+
+        System.out.println("enter second IP:");
+
+    }
+*/
+
+    //Task 6
+
+    private static void rusAndEng(String s) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String string1 = reader.readLine();
+        if (string1.contains("a")){
+            System.out.println("true");
+        }else if (string1.contains("c")){
+            System.out.println("true");
+        }
+    }
+
+}
