@@ -1,0 +1,31 @@
+
+public class Triangle implements FigureInterface {
+
+    private int a,b,c;
+
+        Triangle() {
+            System.out.println("Введите 3 стороны треугольника через пробел");
+            this.a = InputData.scanner.nextInt();
+            this.b = InputData.scanner.nextInt();
+            this.c = InputData.scanner.nextInt();
+            System.out.println(toString());
+        }
+
+        @Override
+        public float perimeter() {
+            return a + b + c;
+        }
+
+        @Override
+        public float area() {
+            float p = perimeter() / 2;
+            return (float) Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        }
+        @Override
+        public String toString(){
+            String name = "Triangle";
+            return name + " perimeter:" + perimeter() + " area:" + area();
+        }
+
+
+    }
