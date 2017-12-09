@@ -1,0 +1,27 @@
+
+public class Circle implements FigureInterface {
+    private int r;
+
+    Circle() {
+        System.out.println("Enter radius of circle:");
+        this.r = InputData.scanner.nextInt();
+        System.out.println(toString());
+        new DataBase(toString());
+    }
+
+    @Override
+    public float perimeter() {
+        return (float) (2 * 3.14 * r);
+    }
+
+    @Override
+    public float area() {
+        return (float) (3.14 * Math.pow(r, 2));
+    }
+
+    @Override
+    public String toString(){
+        String name = "Circle";
+        return name + " perimeter:" + perimeter() + " area:" + area();
+    }
+}
