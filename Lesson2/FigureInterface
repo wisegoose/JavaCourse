@@ -1,0 +1,6 @@
+
+public interface FigureInterface {
+    public float perimeter();
+    public float area();
+    public String toString();
+}
